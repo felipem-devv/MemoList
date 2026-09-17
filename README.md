@@ -3,7 +3,7 @@
 Sistema pessoal de repetição espaçada (SRS) desktop desenvolvido em Python + Flet, projetado especificamente para **memorização de listas ordenadas**.
 
 **MemoList** você revisa e avalia a **sequência completa**, sendo ideal para:
-- Estações de linhas de metrô ou trem
+- Sequência de eventos
 - Sequências históricas e cronologias
 - Listas de mnemônica / palácio da memória
 - Procedimentos e passos ordenados
