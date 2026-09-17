@@ -1,8 +1,8 @@
-# MemoList 🧠
+# MemoList 
 
-Sistema pessoal de repetição espaçada (SRS) desktop desenvolvido em Python + Flet, projetado especificamente para **memorização de listas ordenadas como unidade única**.
+Sistema pessoal de repetição espaçada (SRS) desktop desenvolvido em Python + Flet, projetado especificamente para **memorização de listas ordenadas**.
 
-Diferente de sistemas como Anki onde cada flashcard é atômico, no **MemoList** você revisa e avalia a **sequência completa**, sendo ideal para:
+**MemoList** você revisa e avalia a **sequência completa**, sendo ideal para:
 - Estações de linhas de metrô ou trem
 - Sequências históricas e cronologias
 - Listas de mnemônica / palácio da memória
@@ -10,7 +10,7 @@ Diferente de sistemas como Anki onde cada flashcard é atômico, no **MemoList**
 
 ---
 
-## 🚀 Como Executar
+Como Executar
 
 ### Pré-requisitos e Instalação
 - Python 3.10+
@@ -43,23 +43,7 @@ python main.py
 
 ---
 
-## 🧮 Algoritmo SM-2 Adaptado (Opção B - Anki Style)
-
-- **Ease Factor ($EF$)**: Inicializa em $2.50$ (mínimo $1.30$).
-  $$EF' = \max\left(1.30,\; EF + \left(0.1 - (5 - q) \times (0.08 + (5 - q) \times 0.02)\right)\right)$$
-  - Em caso de **Errei** ($q=1$), $EF$ cai $-0.54$, penalizando fortemente a lista para revisões futuras.
-- **Intervalos Escalonados ($I$)**:
-  - Se $q < 3$ (Errei): $n = 0$, $I = 1$ dia.
-  - Se $n = 0$ (1ª revisão): Difícil = 1d, Bom = 2d, Fácil = 4d.
-  - Se $n = 1$ (2ª revisão): Difícil = 3d, Bom = 6d, Fácil = 8d.
-  - Se $n \ge 2$ (3ª+ revisão):
-    - Difícil: $\max(I+1, \text{round}(I \times 1.2))$
-    - Bom: $\max(I+1, \text{round}(I \times EF'))$
-    - Fácil: $\max(I+1, \text{round}(I \times EF' \times 1.3))$
-
----
-
-## 📁 Estrutura de Arquivos
+Estrutura de Arquivos
 
 ```
 MemoList/
@@ -82,10 +66,4 @@ MemoList/
 └── README.md
 ```
 
----
 
-## 🧪 Executar Testes Automatizados
-
-```bash
-python -m unittest discover tests
-```
